@@ -1,0 +1,20 @@
+extends layout
+
+block navbar
+
+    nav.navbar.navbar-light
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href="#") Mon super site
+
+            ul.nav.navbar-nav
+                li.active: a(href="#") Home
+                li: a(href="?p=page1") Page 1
+                li: a(href="?p=page2") Page 2
+                li: a(href="?p=page3") Page 3
+
+            form.navbar-form.navbar-left(method="GET", action="pages/recherche.php")
+                div.form-group
+                    input(type="text", class="form-control", placeholder="Search", name="recherche_nav")
+
+                button(type="submit", class="btn btn-default") Submit
